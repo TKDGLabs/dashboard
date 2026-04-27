@@ -684,6 +684,47 @@ article.panel.strategy li:last-child {
   background: linear-gradient(90deg, #b76826 0%, #e0a170 100%);
 }
 
+/* --- 새로 추가된 반원형 차트 스타일 --- */
+.doughnut-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+  padding: 0 20px;
+}
+
+.chart-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.chart-box canvas {
+  width: 100% !important;
+  max-width: 280px;
+  height: 180px !important;
+}
+
+.chart-box h4 {
+  margin-top: -20px; /* 반원 차트 하단의 빈 공간을 메워줍니다 */
+  font-size: 19px;
+  color: #1f3152;
+}
+
+.chart-box p {
+  margin-top: 8px;
+  font-size: 15px;
+  color: #5c6f90;
+  line-height: 1.5;
+}
+
+.chart-box p b {
+  color: #151d2f;
+  font-size: 17px;
+}
+/* ------------------------------------- */
+
 .qa-grid {
   margin-top: 12px;
   display: grid;
@@ -929,6 +970,12 @@ article.panel.strategy li:last-child {
   .date-option h4,
   .calendar-box h4 {
     font-size: 22px;
+  }
+  
+  /* 반원형 차트 모바일 대응 추가 */
+  .doughnut-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
 }
 
