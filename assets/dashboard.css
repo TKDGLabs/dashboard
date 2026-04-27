@@ -14,7 +14,8 @@
   --orange: #b76826;
   --orange-soft: #f9e9db;
   --danger: #b02f43;
-  --content-max: 1320px;
+  /* 4K 모니터 대응: 최대 너비를 화면의 96%로 넓혀서 꽉 차게 만듭니다 */
+  --content-max: 96%;
 }
 
 * {
@@ -230,8 +231,9 @@ body.auth-locked .dashboard {
   color: #ffffff;
 }
 
+/* 콘텐츠 영역 전체 패딩을 넉넉하게 */
 .content {
-  padding: 14px 18px 24px;
+  padding: 24px 32px 40px;
   display: grid;
   grid-auto-rows: min-content;
   gap: 10px;
@@ -244,10 +246,11 @@ body.auth-locked .dashboard {
   margin: 0 auto;
 }
 
+/* 박스들 내부 패딩을 큼직하게 */
 .hero {
   border: 1px solid var(--line);
   background: var(--surface);
-  padding: 16px;
+  padding: 28px 32px;
 }
 
 .chip {
@@ -279,15 +282,16 @@ p {
   margin: 0;
 }
 
+/* 폰트 큼직하게 (h1, p) */
 .hero h1 {
-  font-size: 32px;
+  font-size: 40px;
   letter-spacing: -0.02em;
 }
 
 .hero p {
-  margin-top: 12px;
+  margin-top: 16px;
   color: var(--muted);
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.55;
 }
 
@@ -302,7 +306,7 @@ p {
 .section {
   border: 1px solid var(--line);
   background: var(--surface);
-  padding: 14px;
+  padding: 28px 32px;
 }
 
 .section-head {
@@ -314,13 +318,14 @@ p {
   padding-bottom: 9px;
 }
 
+/* 폰트 큼직하게 (h2) */
 .section-head h2 {
-  font-size: 21px;
+  font-size: 28px;
   letter-spacing: -0.02em;
 }
 
 .section-head p {
-  font-size: 13px;
+  font-size: 16px;
   color: var(--muted);
   font-weight: 600;
 }
@@ -355,7 +360,7 @@ p {
 .kpi {
   border: 1px solid var(--line);
   background: #fbfdff;
-  padding: 13px;
+  padding: 24px;
 }
 
 .kpi-top {
@@ -366,7 +371,7 @@ p {
 }
 
 .kpi-top span {
-  font-size: 12px;
+  font-size: 15px;
   color: #5f6f8d;
   font-weight: 700;
 }
@@ -384,23 +389,23 @@ p {
 }
 
 .kpi-value {
-  margin-top: 9px;
+  margin-top: 14px;
   font-family: "Manrope", sans-serif;
-  font-size: 31px;
+  font-size: 46px;
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -0.02em;
 }
 
 .kpi-value .unit {
-  font-size: 15px;
+  font-size: 22px;
   font-weight: 700;
   margin-left: 4px;
 }
 
 .kpi-meta {
-  margin-top: 6px;
-  font-size: 12px;
+  margin-top: 10px;
+  font-size: 14px;
   color: #546683;
   line-height: 1.45;
 }
@@ -426,24 +431,25 @@ p {
 .panel {
   border: 1px solid var(--line);
   background: #fcfdff;
-  padding: 14px;
+  padding: 24px;
 }
 
 .panel h3 {
-  font-size: 18px;
+  font-size: 22px;
   letter-spacing: -0.01em;
 }
 
 .panel-sub {
-  margin-top: 7px;
-  font-size: 13px;
+  margin-top: 10px;
+  font-size: 15px;
   color: #5c6f90;
   line-height: 1.45;
 }
 
+/* 차트 높이 확대 */
 .chart-wrap {
-  margin-top: 10px;
-  height: 240px;
+  margin-top: 20px;
+  height: 380px;
 }
 
 .metric-list {
@@ -512,19 +518,20 @@ table {
   overflow-x: auto;
 }
 
+/* 표 간격 및 폰트 크기 확대 */
 th,
 td {
   border-bottom: 1px solid #dbe4f2;
-  padding: 9px 8px;
+  padding: 16px 12px;
   text-align: left;
   vertical-align: top;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.4;
 }
 
 th {
   color: #657493;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .num {
@@ -595,21 +602,21 @@ th {
 .contract-kpi {
   border: 1px solid var(--line);
   background: #fbfdff;
-  padding: 12px;
+  padding: 24px;
 }
 
 .contract-kpi span {
   display: block;
-  font-size: 12px;
+  font-size: 15px;
   color: #60708f;
   font-weight: 700;
 }
 
 .contract-kpi b {
-  margin-top: 8px;
+  margin-top: 14px;
   display: block;
   font-family: "Manrope", sans-serif;
-  font-size: 29px;
+  font-size: 46px;
   line-height: 1.1;
 }
 
@@ -617,7 +624,7 @@ th {
   margin-top: 12px;
   border: 1px solid var(--line);
   background: #fcfdff;
-  padding: 13px;
+  padding: 24px;
 }
 
 .progress-row {
@@ -703,7 +710,7 @@ th {
 .date-option {
   border: 1px solid var(--line);
   background: #fbfdff;
-  padding: 12px;
+  padding: 24px;
 }
 
 .date-option + .date-option {
@@ -726,7 +733,7 @@ th {
 .calendar-box {
   border: 1px solid var(--line);
   background: #fcfdff;
-  padding: 14px;
+  padding: 24px;
 }
 
 .calendar-box h4 {
@@ -854,11 +861,12 @@ th {
 }
 
 @media (min-width: 1200px) {
+  /* 하단에 휑하게 빈 흰색 공간이 남는 문제를 없애기 위해 높이 강제 설정을 auto로 변경 */
   body.page-overview .content > .section,
   body.page-contract .content > .section,
   body.page-interpretation .content > .section,
   body.page-schedule .content > .section {
-    min-height: calc(100vh - 184px);
+    min-height: auto; 
   }
 }
 
