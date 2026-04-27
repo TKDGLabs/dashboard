@@ -561,39 +561,39 @@ th {
   line-height: 1.45;
 }
 
-/* 향후 실행 전략 박스 휑한 느낌 해결 (높이 및 여백 최적화) */
-.strategy {
-  border: 1px solid #3d66d8;
+/* 파란색 성과 분석 및 향후 실행 전략 박스 */
+article.panel.strategy {
   background: linear-gradient(165deg, #2f5fe4 0%, #244abf 100%);
   color: #eff3ff;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 380px; /* 왼쪽 차트 높이와 맞춤 */
+  min-height: 380px; /* 왼쪽 차트와 높이 동기화 */
+  padding: 32px;
 }
 
-.strategy h3 {
+article.panel.strategy h3 {
   color: #ffffff;
   font-size: 24px;
-  margin-bottom: 20px;
+  margin-top: 0;
+  margin-bottom: 24px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  padding-bottom: 15px;
+  padding-bottom: 16px;
 }
 
-.strategy ul {
+article.panel.strategy ul {
   margin: 0;
-  padding-left: 25px;
+  padding-left: 20px;
 }
 
-.strategy li {
-  margin-bottom: 28px;
-  font-size: 18px;
-  line-height: 1.8;
+article.panel.strategy li {
   color: #ffffff;
-  letter-spacing: -0.01em;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 14px; /* 내용이 늘어나서 삐져나가지 않도록 간격 최적화 */
 }
 
-.strategy li:last-child {
+article.panel.strategy li:last-child {
   margin-bottom: 0;
 }
 
