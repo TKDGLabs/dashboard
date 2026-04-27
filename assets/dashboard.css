@@ -561,25 +561,40 @@ th {
   line-height: 1.45;
 }
 
+/* 향후 실행 전략 박스 휑한 느낌 해결 (높이 및 여백 최적화) */
 .strategy {
   border: 1px solid #3d66d8;
   background: linear-gradient(165deg, #2f5fe4 0%, #244abf 100%);
   color: #eff3ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 380px; /* 왼쪽 차트 높이와 맞춤 */
 }
 
 .strategy h3 {
   color: #ffffff;
+  font-size: 24px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 15px;
 }
 
 .strategy ul {
-  margin: 10px 0 0;
-  padding-left: 20px;
+  margin: 0;
+  padding-left: 25px;
 }
 
 .strategy li {
-  margin-bottom: 8px;
-  font-size: 14px;
-  line-height: 1.45;
+  margin-bottom: 28px;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+
+.strategy li:last-child {
+  margin-bottom: 0;
 }
 
 .notice {
