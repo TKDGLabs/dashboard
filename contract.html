@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>계약 진행사항 | 주치아 앞선tube 운영 대시보드</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/dashboard.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="./assets/dashboard.js"></script>
+  </head>
+  <body class="page-contract">
+    <div class="dashboard">
+      <aside class="sidebar">
+        <div class="brand">
+          <img src="./assets/profile-doctor.png" alt="주치아 유튜브 프로필" />
+          <div>
+            <div class="brand-title">앞선tube Dashboard</div>
+            <div class="brand-sub">주치아 채널 운영 리포트</div>
+          </div>
+        </div>
+
+        <p class="menu-label">Menu</p>
+        <nav class="menu">
+          <a class="active" href="./contract.html"><i class="fa-solid fa-file-contract"></i>계약 진행사항</a>
+          <a href="./index.html"><i class="fa-solid fa-gauge-high"></i>개요</a>
+          <a href="./performance.html"><i class="fa-solid fa-chart-line"></i>콘텐츠 성과</a>
+          <a href="./interpretation.html"><i class="fa-solid fa-magnifying-glass-chart"></i>성과 해석</a>
+          <a href="./schedule.html"><i class="fa-solid fa-calendar-days"></i>다음 촬영 일정</a>
+        </nav>
+
+        <p class="menu-label">Notice</p>
+        <div class="sidebar-note">
+          <b>결제 회차 안내</b>
+          결제는 월 단위가 아닌 회차 단위로 관리하고 있습니다. 자세한 설명은 본문 i 버튼에서 확인 가능합니다.
+        </div>
+      </aside>
+
+      <main class="content">
+        <header class="hero">
+          <span class="chip"><i class="fa-solid fa-file-contract"></i> CONTRACT STATUS</span>
+          <div class="hero-grid">
+            <div>
+              <h1>계약 진행사항</h1>
+              <p>결제 회차와 콘텐츠 업로드 이행 현황을 한 화면에서 확인할 수 있도록 정리했습니다.</p>
+            </div>
+            <div class="hero-date">기준일: 2026.04.27</div>
+          </div>
+        </header>
+
+        <section class="section">
+          <div class="section-head">
+            <h2>결제 현황</h2>
+            <div class="section-tools">
+              <p>회차 기준 관리</p>
+              <button class="icon-btn" id="openContractInfo" type="button" aria-label="결제 회차 기준 안내 보기">
+                <i class="fa-solid fa-info"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="contract-grid">
+            <article class="contract-kpi">
+              <span>총 결제 회차</span>
+              <b>12회</b>
+            </article>
+            <article class="contract-kpi">
+              <span>완료 결제 회차</span>
+              <b>7회</b>
+            </article>
+            <article class="contract-kpi">
+              <span>남은 결제 회차</span>
+              <b>5회</b>
+            </article>
+            <article class="contract-kpi">
+              <span>총 업로드 편수</span>
+              <b>127편</b>
+            </article>
+          </div>
+
+          <article class="contract-detail">
+            <h3>7회차 기준 업로드 이행 현황</h3>
+            <p class="panel-sub">기준 조건: 결제 1회차당 롱폼 4편 + 숏폼 4편 + 재편집 쇼츠 8편</p>
+
+            <div class="progress-row">
+              <div class="progress-head">
+                <span>롱폼: 27편 업로드 (1편 비공개)</span>
+                <b>기준 28편 대비 96.4%</b>
+              </div>
+              <div class="progress-track"><span class="bar-long"></span></div>
+            </div>
+
+            <div class="progress-row">
+              <div class="progress-head">
+                <span>숏폼: 34편 업로드</span>
+                <b>기준 28편 대비 121.4%</b>
+              </div>
+              <div class="progress-track"><span class="bar-short"></span></div>
+            </div>
+
+            <div class="progress-row">
+              <div class="progress-head">
+                <span>재편집 쇼츠: 66편 업로드 (2편 비공개)</span>
+                <b>기준 56편 대비 117.9%</b>
+              </div>
+              <div class="progress-track"><span class="bar-reedit"></span></div>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <div class="modal-backdrop" id="contractModalBackdrop" aria-hidden="true">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="contractModalTitle">
+        <div class="modal-head">
+          <h3 id="contractModalTitle">결제 회차 기준 안내</h3>
+          <button class="modal-close" id="closeContractInfo" type="button" aria-label="닫기">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <p>
+          약정된 계약 기간은 1년이나, 계약 기간 도중 휴식기 및 촬영 연기 등으로 인한 업로드 주기 변경으로 인해
+          결제 단위를 변경하여 결제를 진행하고 있습니다.
+        </p>
+        <p>
+          선금 지급 조건이므로, 다음 결제 주기가 되면 담당자가 결제 요청을 드리겠습니다.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

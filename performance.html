@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>콘텐츠 성과 | 주치아 앞선tube 운영 대시보드</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/dashboard.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="./assets/dashboard.js"></script>
+  </head>
+  <body class="page-performance">
+    <div class="dashboard">
+      <aside class="sidebar">
+        <div class="brand">
+          <img src="./assets/profile-doctor.png" alt="주치아 유튜브 프로필" />
+          <div>
+            <div class="brand-title">앞선tube Dashboard</div>
+            <div class="brand-sub">주치아 채널 운영 리포트</div>
+          </div>
+        </div>
+
+        <p class="menu-label">Menu</p>
+        <nav class="menu">
+          <a href="./contract.html"><i class="fa-solid fa-file-contract"></i>계약 진행사항</a>
+          <a href="./index.html"><i class="fa-solid fa-gauge-high"></i>개요</a>
+          <a class="active" href="./performance.html"><i class="fa-solid fa-chart-line"></i>콘텐츠 성과</a>
+          <a href="./interpretation.html"><i class="fa-solid fa-magnifying-glass-chart"></i>성과 해석</a>
+          <a href="./schedule.html"><i class="fa-solid fa-calendar-days"></i>다음 촬영 일정</a>
+        </nav>
+
+        <p class="menu-label">Focus</p>
+        <div class="sidebar-note">
+          <b>최근 28일 기준</b>
+          검색어 유입, 숏폼/롱폼 성과, 향후 실행 전략 순서로 구성했습니다.
+        </div>
+      </aside>
+
+      <main class="content">
+        <header class="hero">
+          <span class="chip"><i class="fa-solid fa-chart-line"></i> CONTENT PERFORMANCE</span>
+          <div class="hero-grid">
+            <div>
+              <h1>콘텐츠 성과 분석</h1>
+              <p>트래픽 구조, 검색 유입 키워드, 숏폼/롱폼 성과, 향후 실행 전략을 분리해 확인할 수 있게 정리했습니다.</p>
+            </div>
+            <div class="hero-date">기준일: 2026.04.27 · 최근 28일 데이터</div>
+          </div>
+        </header>
+
+        <section class="section">
+          <div class="section-head">
+            <h2>YouTube 검색 유입 키워드</h2>
+            <p>첨부해주신 최근 28일 데이터 반영</p>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th style="width: 34%">검색어</th>
+                  <th class="num" style="width: 15%">조회수</th>
+                  <th class="num" style="width: 17%">시청 시간</th>
+                  <th class="num" style="width: 15%">평균 시청</th>
+                  <th class="num" style="width: 9%">노출수</th>
+                  <th class="num" style="width: 10%">CTR</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><b>합계</b></td>
+                  <td class="num">9,937</td>
+                  <td class="num">64.7</td>
+                  <td class="num">0:40</td>
+                  <td class="num">38,580</td>
+                  <td class="num">8.2%</td>
+                </tr>
+                <tr>
+                  <td>임플란트 뼈이식</td>
+                  <td class="num">937</td>
+                  <td class="num">4.6</td>
+                  <td class="num">0:32</td>
+                  <td class="num">0</td>
+                  <td class="num">-</td>
+                </tr>
+                <tr>
+                  <td>턱관절 통증</td>
+                  <td class="num">415</td>
+                  <td class="num">2.2</td>
+                  <td class="num">0:31</td>
+                  <td class="num">0</td>
+                  <td class="num">-</td>
+                </tr>
+                <tr>
+                  <td>임플란트 과정</td>
+                  <td class="num">254</td>
+                  <td class="num">1.0</td>
+                  <td class="num">0:29</td>
+                  <td class="num">0</td>
+                  <td class="num">-</td>
+                </tr>
+                <tr>
+                  <td>턱관절 치료</td>
+                  <td class="num">239</td>
+                  <td class="num">1.4</td>
+                  <td class="num">0:34</td>
+                  <td class="num">0</td>
+                  <td class="num">-</td>
+                </tr>
+                <tr>
+                  <td>치간칫솔 추천</td>
+                  <td class="num">182</td>
+                  <td class="num">0.9</td>
+                  <td class="num">0:28</td>
+                  <td class="num">0</td>
+                  <td class="num">-</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <h2>숏폼/롱폼 성과</h2>
+            <p>콘텐츠 타입별 대표 성과</p>
+          </div>
+
+          <div class="split-2">
+            <article class="panel">
+              <h3>숏폼 TOP 3 (최근 28일)</h3>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th style="width: 52%">영상 제목</th>
+                      <th class="num" style="width: 16%">조회수</th>
+                      <th class="num" style="width: 14%">시청</th>
+                      <th class="num" style="width: 18%">계속 시청</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="title-cell">턱관절이 아프면 어느 병원에 가야할까?</td>
+                      <td class="num">4,833</td>
+                      <td class="num">33초</td>
+                      <td class="num growth">77.2%</td>
+                    </tr>
+                    <tr>
+                      <td class="title-cell">임플란트 뼈이식, 안전한 거 맞나요?</td>
+                      <td class="num">3,405</td>
+                      <td class="num">32초</td>
+                      <td class="num growth">75.8%</td>
+                    </tr>
+                    <tr>
+                      <td>임플란트, 치아교정 중 무엇이 더 먼저인가요?</td>
+                      <td class="num">2,192</td>
+                      <td class="num">10초</td>
+                      <td class="num">26.2%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+
+            <article class="panel">
+              <h3>롱폼 TOP 3 (최근 28일)</h3>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th style="width: 50%">영상 제목</th>
+                      <th class="num" style="width: 13%">조회수</th>
+                      <th class="num" style="width: 19%">평균 시청</th>
+                      <th class="num" style="width: 18%">조회율</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="title-cell">임플란트 수술 후 부작용, 대부분 이것 때문입니다</td>
+                      <td class="num">690</td>
+                      <td class="num">4분 19초</td>
+                      <td class="num">34.3%</td>
+                    </tr>
+                    <tr>
+                      <td class="title-cell">임플란트만 권하는 치과? 틀니가 더 나을 수도</td>
+                      <td class="num">316</td>
+                      <td class="num">2분 31초</td>
+                      <td class="num">45.3%</td>
+                    </tr>
+                    <tr>
+                      <td class="title-cell">치아 미백 vs 라미네이트</td>
+                      <td class="num">295</td>
+                      <td class="num">2분 44초</td>
+                      <td class="num">38.1%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+          </div>
+
+          <div class="split-2">
+            <article class="panel">
+              <h3>롱폼 상위 3개 성과 그래프</h3>
+              <p class="panel-sub">조회수 기준 가로 막대형으로 단순화했습니다.</p>
+              <div class="chart-wrap"><canvas id="longformRankingChart"></canvas></div>
+            </article>
+
+            <article class="panel strategy">
+              <h3>향후 실행 전략 (예정)</h3>
+              <ul>
+                <li>지역 검색어(창원·마산·진해)를 제목/설명/고정댓글에 자연스럽게 반영할 예정입니다.</li>
+                <li>롱폼은 비교·판단형 콘텐츠를 우선 편성해 정보 신뢰도를 높일 예정입니다.</li>
+                <li>숏폼은 환자 질문형 시리즈 중심으로 재방문 흐름을 유지할 예정입니다.</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <h2>알려드립니다</h2>
+            <p>업로드 운영 관련 안내</p>
+          </div>
+
+          <article class="panel">
+            <ul class="bullet">
+              <li>현재 촬영본 일부는 채널 운영 방향과 맞지 않아 전면 재촬영이 필요할 것으로 판단됩니다.</li>
+              <li>원장님 전문성이 더 잘 전달되는 구성으로 다시 정리해 진행하겠습니다.</li>
+              <li>시청자 이해도와 상담 전환 흐름을 함께 고려한 조정이니 양해 부탁드립니다.</li>
+            </ul>
+            <div class="notice">
+              내부 판단 기준을 더 명확히 잡아, 다음 촬영부터는 콘텐츠 주제/구성/업로드 순서가 한 번에 이해되도록 정돈하겠습니다.
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

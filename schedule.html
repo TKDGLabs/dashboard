@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>다음 촬영 일정 | 주치아 앞선tube 운영 대시보드</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/dashboard.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="./assets/dashboard.js"></script>
+  </head>
+  <body class="page-schedule">
+    <div class="dashboard">
+      <aside class="sidebar">
+        <div class="brand">
+          <img src="./assets/profile-doctor.png" alt="주치아 유튜브 프로필" />
+          <div>
+            <div class="brand-title">앞선tube Dashboard</div>
+            <div class="brand-sub">주치아 채널 운영 리포트</div>
+          </div>
+        </div>
+
+        <p class="menu-label">Menu</p>
+        <nav class="menu">
+          <a href="./contract.html"><i class="fa-solid fa-file-contract"></i>계약 진행사항</a>
+          <a href="./index.html"><i class="fa-solid fa-gauge-high"></i>개요</a>
+          <a href="./performance.html"><i class="fa-solid fa-chart-line"></i>콘텐츠 성과</a>
+          <a href="./interpretation.html"><i class="fa-solid fa-magnifying-glass-chart"></i>성과 해석</a>
+          <a class="active" href="./schedule.html"><i class="fa-solid fa-calendar-days"></i>다음 촬영 일정</a>
+        </nav>
+
+        <p class="menu-label">Schedule</p>
+        <div class="sidebar-note">
+          <b>촬영 후보 일정</b>
+          일정만 명확하게 확인할 수 있도록 간단한 제안 형식으로 구성했습니다.
+        </div>
+      </aside>
+
+      <main class="content">
+        <header class="hero">
+          <span class="chip"><i class="fa-solid fa-calendar-days"></i> SCHEDULE PROPOSAL</span>
+          <div class="hero-grid">
+            <div>
+              <h1>다음 촬영 일정 제안</h1>
+              <p>후보 날짜만 확인하시고 편한 일정으로 확정해주시면, 그 일정 기준으로 세부 준비를 진행하겠습니다.</p>
+            </div>
+            <div class="hero-date">기준일: 2026.04.27</div>
+          </div>
+        </header>
+
+        <section class="section">
+          <div class="section-head">
+            <h2>촬영 후보 날짜</h2>
+            <p>추천일 표시</p>
+          </div>
+
+          <div class="schedule-grid">
+            <div>
+              <article class="date-option">
+                <h4>후보 1 · 2026년 5월 12일(화)~13일(수) 중 1일</h4>
+                <p>신규 기획 반영까지 여유가 있어 우선 제안드립니다.</p>
+              </article>
+
+              <article class="date-option">
+                <h4>후보 2 · 2026년 5월 19일(화)~20일(수) 중 1일</h4>
+                <p>일정 조율이 어려울 경우, 대체 가능한 촬영 후보 일정입니다.</p>
+              </article>
+            </div>
+
+            <article class="calendar-box">
+              <h4>2026년 5월 캘린더</h4>
+              <table class="calendar">
+                <thead>
+                  <tr>
+                    <th>일</th>
+                    <th>월</th>
+                    <th>화</th>
+                    <th>수</th>
+                    <th>목</th>
+                    <th>금</th>
+                    <th>토</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>1</td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>11</td>
+                    <td><span class="calendar-dot opt-a">12</span></td>
+                    <td><span class="calendar-dot opt-a">13</span></td>
+                    <td>14</td>
+                    <td>15</td>
+                    <td>16</td>
+                  </tr>
+                  <tr>
+                    <td>17</td>
+                    <td>18</td>
+                    <td><span class="calendar-dot opt-b">19</span></td>
+                    <td><span class="calendar-dot opt-b">20</span></td>
+                    <td>21</td>
+                    <td>22</td>
+                    <td>23</td>
+                  </tr>
+                  <tr>
+                    <td>24</td>
+                    <td>25</td>
+                    <td>26</td>
+                    <td>27</td>
+                    <td>28</td>
+                    <td>29</td>
+                    <td>30</td>
+                  </tr>
+                  <tr>
+                    <td>31</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+          </div>
+
+          <p class="schedule-end">일정 확정 시 세부 촬영 기획안 전달 및 업로드 순서 정리 예정입니다.</p>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
