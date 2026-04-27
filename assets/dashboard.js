@@ -292,6 +292,67 @@
     });
   }
 
+  // --- 새로 추가된 반원형 차트 렌더링 함수 ---
+  function renderContractCharts() {
+    const ctxLong = document.getElementById("chartLong");
+    const ctxShort = document.getElementById("chartShort");
+    const ctxReedit = document.getElementById("chartReedit");
+
+    if (!ctxLong || typeof Chart === "undefined") return;
+
+    // 반원형 차트 공통 옵션 (180도 회전, 잘린 도넛 형태)
+    const commonOptions = {
+      responsive: true,
+      maintainAspectRatio: false,
+      rotation: -90,
+      circumference: 180,
+      cutout: "75%",
+      plugins: { tooltip: { enabled: false } }
+    };
+
+    // 1. 롱폼 (목표 28, 달성 27)
+    new Chart(ctxLong, {
+      type: "doughnut",
+      data: {
+        datasets: [{
+          data: [27, 1], // 달성 27, 남은 1
+          backgroundColor: ["#2d57de", "#dbe4f3"],
+          borderWidth: 0,
+          borderRadius: 4
+        }]
+      },
+      options: commonOptions
+    });
+
+    // 2. 숏폼 (목표 28, 달성 34 - 100% 초과)
+    new Chart(ctxShort, {
+      type: "doughnut",
+      data: {
+        datasets: [{
+          data: [34, 0], // 초과달성이므로 100% 채움
+          backgroundColor: ["#0b8b74", "#dbe4f3"],
+          borderWidth: 0,
+          borderRadius: 4
+        }]
+      },
+      options: commonOptions
+    });
+
+    // 3. 재편집 쇼츠 (목표 56, 달성 66 - 100% 초과)
+    new Chart(ctxReedit, {
+      type: "doughnut",
+      data: {
+        datasets: [{
+          data: [66, 0], // 초과달성이므로 100% 채움
+          backgroundColor: ["#b76826", "#dbe4f3"],
+          borderWidth: 0,
+          borderRadius: 4
+        }]
+      },
+      options: commonOptions
+    });
+  }
+
   function initContractModal() {
     const backdrop = document.getElementById("contractModalBackdrop");
     const openBtn = document.getElementById("openContractInfo");
@@ -337,6 +398,7 @@
     renderRegionChart();
     renderTrafficChart();
     renderLongformRankingChart();
+    renderContractCharts(); // 반원형 차트 렌더링 함수 실행 추가
     initContractModal();
   }
 
