@@ -725,36 +725,52 @@ article.panel.strategy li:last-child {
 }
 /* ------------------------------------- */
 
+/* --- 성과 해석(Interpretation) 페이지 전용 4K 최적화 --- */
 .qa-grid {
-  margin-top: 12px;
+  margin-top: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  gap: 20px; /* 박스 사이 간격을 시원하게 */
 }
 
 .qa h4 {
   margin: 0;
-  font-size: 17px;
+  font-size: 22px; /* 제목 확대 */
+  color: #1f3152;
 }
 
 .qa p {
-  margin-top: 8px;
-  font-size: 14px;
+  margin-top: 14px;
+  font-size: 16px; /* 본문 확대 */
   color: #4f607f;
-  line-height: 1.55;
+  line-height: 1.6;
 }
 
 .final-note {
-  margin-top: 10px;
+  margin-top: 20px;
   border: 1px solid #c9d9f5;
   background: #edf3ff;
-  padding: 12px;
+  padding: 32px; /* 4K 해상도에 맞춰 큼직하게 확대 */
+  border-radius: 8px;
 }
 
 .final-note h4 {
   margin: 0;
-  font-size: 17px;
+  font-size: 24px; /* 결론 제목 돋보이게 */
+  color: #1a3673;
 }
+
+.final-note .bullet {
+  margin-top: 16px;
+}
+
+.final-note .bullet li {
+  font-size: 17px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  color: #2b3f66;
+}
+/* ---------------------------------------------------- */
 
 .schedule-grid {
   margin-top: 12px;
